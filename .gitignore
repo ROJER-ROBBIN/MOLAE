@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+venv/
+WhatsApp Chat with Chitraguptar!! .txt
+
+# Temporary/debug scripts and logs
+analyze.py
+analyze2.py
+check_key.py
+direct_gemini_test.py
+list_models.py
+send_queries.py
+test_api_manual.py
+test_chat_endpoint.py
+test_req.py
+test_search.py
+server.log

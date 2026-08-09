@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chitraguptar Digital Memory - Original Chat</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h2>Memories</h2>
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search original chat...">
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Sender:</label>
+                    <select id="senderFilter">
+                        <option value="">All</option>
+                        <option value="ROBbiN ROjER">ROBbiN ROjER</option>
+                        <option value="Chitraguptar!! ">Chitraguptar!!</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Jump to Date:</label>
+                    <input type="date" id="dateFilter">
+                </div>
+                
+                <button id="applyFilters" class="btn-primary">Apply Filters</button>
+                <button id="resetFilters" class="btn-secondary">Reset</button>
+            </div>
+            
+            <div class="sidebar-info">
+                <p>Viewing Layer A (Original Memory).</p>
+                <p>Total items: <span id="totalCount">Loading...</span></p>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <header class="chat-header">
+                <div class="chat-title">
+                    <div class="avatar">C</div>
+                    <div class="title-text">
+                        <h1>Chitraguptar!!</h1>
+                        <span class="subtitle">Original WhatsApp Chat Backup</span>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="chat-messages" id="chatMessages">
+                <!-- Messages will be injected here via JS -->
+                <div class="loading">Loading messages...</div>
+            </div>
+            
+            <div class="chat-footer">
+                <div class="pagination">
+                    <button id="prevBtn" disabled>Previous</button>
+                    <span id="pageInfo">Page 1</span>
+                    <button id="nextBtn">Next</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHITRAGUPTAR | Digital Memory</title>
+    <link rel="stylesheet" href="css/main.css?v=3">
+    <link rel="stylesheet" href="css/chat.css?v=3">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h1>CHITRAGUPTAR</h1>
+                <p class="subtitle">Digital Memory</p>
+                <p class="status-badge">AI Reconstruction</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button class="nav-btn active" id="nav-chat">Chat</button>
+                <button class="nav-btn" id="nav-memories">Memories</button>
+                <button class="nav-btn" id="nav-original">Original Chat</button>
+                <button class="nav-btn" id="nav-timeline">Timeline</button>
+                <button class="nav-btn" id="nav-settings">Settings</button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="action-btn" id="new-conversation-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    New Conversation
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <!-- Dedicated Wallpaper Layers -->
+            <div class="wallpaper">
+                <div class="wallpaper-blur"></div>
+                <div class="wallpaper-image"></div>
+                <div class="wallpaper-overlay"></div>
+            </div>
+
+            <!-- Mobile Header (Hidden on Desktop) -->
+            <header class="mobile-header">
+                <button id="mobile-menu-btn" class="icon-btn" aria-label="Open menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <div class="mobile-header-title">
+                    <h2>CHITRAGUPTAR</h2>
+                    <span class="status-badge small">AI Reconstruction</span>
+                </div>
+            </header>
+
+            <!-- Chat History Area -->
+            <div class="chat-container" id="chat-container">
+                <!-- Initial Empty State -->
+                <div class="empty-state" id="empty-state">
+                    <h2>CHITRAGUPTAR</h2>
+                    <h3>Digital Memory</h3>
+                    <p class="tagline">Conversations preserved. Memories remembered.</p>
+                    <p class="disclaimer">This is an AI reconstruction based on preserved conversations. Generated responses are not original historical messages.</p>
+                    
+                    <div class="suggested-prompts">
+                        <button class="prompt-btn" data-prompt="Do you remember our college days?">"Do you remember our college days?"</button>
+                        <button class="prompt-btn" data-prompt="Tell me about our exam conversations.">"Tell me about our exam conversations."</button>
+                        <button class="prompt-btn" data-prompt="What memories do you have about our trips?">"What memories do you have about our trips?"</button>
+                    </div>
+                </div>
+                
+                <!-- Chat Messages will be appended here -->
+                <div class="messages-wrapper" id="messages-wrapper">
+                    <!-- Typing Indicator (Hidden by default) -->
+                    <div class="typing-indicator-container" id="typing-indicator" style="display: none;">
+                        <div class="message ai-message typing">
+                            <div class="message-label">AI RECONSTRUCTION</div>
+                            <div class="typing-dots">
+                                <span>.</span><span>.</span><span>.</span>
+                            </div>
+                            <span class="thinking-text">Thinking...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="input-container">
+                <div class="error-banner" id="error-banner" style="display: none;"></div>
+                <div class="input-box">
+                    <textarea 
+                        id="message-input" 
+                        placeholder="Write something..." 
+                        rows="1" 
+                        aria-label="Message input"
+                    ></textarea>
+                    <button id="send-btn" class="send-btn" aria-label="Send message" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-hint">Press Enter to send, Shift + Enter for new line</div>
+            </div>
+        </main>
+        
+        <!-- Drawer Overlay (Mobile) -->
+        <div class="drawer-overlay" id="drawer-overlay"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js?v=3"></script>
+    <script src="js/api.js?v=3"></script>
+    <script src="js/chat.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
+</body>
+</html>
